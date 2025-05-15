@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import photo1 from "../assets/photo1.png"
+import { NavLink } from "react-router-dom";
 
 import { ChevronDown, ChevronUp, Check, Twitter, Facebook, Linkedin, Info, Users, Award, X, ChevronRight, ChevronLeft } from 'lucide-react';
 
@@ -50,6 +51,8 @@ useEffect(() => {
     document.head.removeChild(style);
   };
 }, []);
+
+
   const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState(1);
   const [showCallToAction, setShowCallToAction] = useState(false);
@@ -106,9 +109,9 @@ useEffect(() => {
             >
               Learn Your Rights
             </button>
-            <button className="border-2 border-white text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300">
-              Find Polling Station
-            </button>
+            <NavLink to="/positions" className="border-2 border-white text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300">
+              Kenya's Elective Positions
+            </NavLink>
           </div>
         </div>
       </header>
@@ -233,9 +236,9 @@ useEffect(() => {
               <button className="bg-red-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition duration-300">
                 Check Voter Status
               </button>
-              <button className="bg-green-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300">
-                Find Polling Station
-              </button>
+              <NavLink to="/positions" className="bg-green-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300">
+              Kenya's Elective Positions
+              </NavLink>
             </div>
           </div>
         </section>
